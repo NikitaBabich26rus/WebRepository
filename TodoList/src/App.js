@@ -3,7 +3,7 @@ import TodoList from './TodoList'
 import {Context} from './Context'
 
 export default function App() {
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
   const [taskInput, setTasksInput] = useState('');
 
   const addTask = (event) => {
@@ -20,11 +20,7 @@ export default function App() {
     }
   }
 
-  const removeTask = (id) => {
-    setTasks(tasks.filter(task => {
-      return task.id !== id
-    }))
-  }
+  const removeTask = (id) => setTasks(tasks.filter(task => task.id !== id))
 
   const toggleTask = (id) => {
     setTasks(tasks.map(task => {

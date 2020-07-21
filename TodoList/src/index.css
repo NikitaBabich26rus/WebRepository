@@ -11,11 +11,15 @@ body {
   color: white;
 }
 
-.todo label {
+.task label {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   padding: 1rem;
+}
+
+.task.completed span {
+  text-decoration: line-through;
 }
