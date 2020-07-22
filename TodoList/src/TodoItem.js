@@ -3,12 +3,10 @@ import {Context} from './Context'
 
 export default function TodoItem({title, id, completed}) {
     const {toggleTask, removeTask} = useContext(Context);
-    
-    let taskState
-    completed ? taskState = 'task completed' : taskState = 'task';
+    const taskClassName = (completed) ? 'task completed' : 'task';
 
     return (
-        <li className={taskState}>
+        <li className={taskClassName}>
             <label>
                 <input type="checkbox" onChange={() => toggleTask(id)} checked={completed} />
                 <span>{title}</span>
